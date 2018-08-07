@@ -1,0 +1,6 @@
+framework module Pods_joachimPlayerUITests {
+  umbrella header "Pods-joachimPlayerUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

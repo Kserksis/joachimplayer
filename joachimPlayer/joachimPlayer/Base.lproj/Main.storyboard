@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,13 +14,63 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="joachimPlayer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2p-IA-Cod">
+                                <rect key="frame" x="172" y="40" width="30" height="133.5"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="onPlayButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oHF-Z3-3PG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oeh-yU-iaQ">
+                                <rect key="frame" x="172" y="193.5" width="30" height="133.5"/>
+                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="onBackButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Gb-YP-aQ2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBf-1m-eHy">
+                                <rect key="frame" x="172" y="347" width="30" height="133.5"/>
+                                <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="onPauseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dUa-KF-AaD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oy7-Px-r7F">
+                                <rect key="frame" x="172.5" y="500.5" width="30" height="126.5"/>
+                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="onForButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hSn-ls-Dxp"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="F2p-IA-Cod" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:5" id="BdJ-Pl-OsU"/>
+                            <constraint firstItem="Oy7-Px-r7F" firstAttribute="top" secondItem="oBf-1m-eHy" secondAttribute="bottom" constant="20" id="Euv-bM-Flp"/>
+                            <constraint firstItem="oeh-yU-iaQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="INQ-iD-vYL"/>
+                            <constraint firstItem="F2p-IA-Cod" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Muh-qt-Gsr"/>
+                            <constraint firstItem="oeh-yU-iaQ" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:5" id="SGP-zf-Uee"/>
+                            <constraint firstItem="oBf-1m-eHy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aLf-hi-NSe"/>
+                            <constraint firstItem="oeh-yU-iaQ" firstAttribute="top" secondItem="F2p-IA-Cod" secondAttribute="bottom" constant="20" id="av3-3y-AX9"/>
+                            <constraint firstItem="Oy7-Px-r7F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lJy-gS-Zd5"/>
+                            <constraint firstItem="oBf-1m-eHy" firstAttribute="top" secondItem="oeh-yU-iaQ" secondAttribute="bottom" constant="20" id="lgZ-d1-FJt"/>
+                            <constraint firstItem="F2p-IA-Cod" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="40" id="nPY-gh-E9w"/>
+                            <constraint firstItem="oBf-1m-eHy" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:5" id="ncv-wl-zZt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Oy7-Px-r7F" secondAttribute="bottom" constant="40" id="qpY-p5-894"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="oeh-yU-iaQ" id="Ax3-N7-fjE"/>
+                        <outlet property="forButton" destination="Oy7-Px-r7F" id="8Eo-Fy-Wpp"/>
+                        <outlet property="pauseButton" destination="oBf-1m-eHy" id="V0n-XG-lmT"/>
+                        <outlet property="playButton" destination="F2p-IA-Cod" id="xCV-lD-cIo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
